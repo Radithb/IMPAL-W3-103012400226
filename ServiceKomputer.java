@@ -24,7 +24,6 @@ public class ServiceKomputer {
         System.out.print("Apakah customer drop off dan pick up sendiri? (true/false): ");
         dropOffPickup = input.nextBoolean();
 
-        // DO CASE
         if (computerAmount == 1 || computerAmount == 2) {
             baseFee = 50;
             additionalFee = 0;
@@ -38,14 +37,12 @@ public class ServiceKomputer {
             additionalFee = 10 * peripheral;
         }
 
-        // IF service-time is NOT in business hours
         if (!businessHours) {
             baseFee = baseFee * 2;
         }
 
         totalBaseFee = baseFee + additionalFee;
 
-        // IF customer is willing to drop off and pick up
         if (dropOffPickup) {
             totalBaseFee = totalBaseFee / 2;
         }
